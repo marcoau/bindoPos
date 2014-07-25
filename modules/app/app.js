@@ -11,6 +11,34 @@ var app = angular.module('app', [
           },
           'nav': {
             templateUrl: '/modules/nav/nav.html'
+          },
+          'body': {
+            templateUrl: '/modules/shop/shop.html'
+          }
+        }
+      })
+      .state('cart', {
+        url: '/cart',
+        views: {
+          'header': {
+            templateUrl: '/modules/header/header.html'
+          },
+          'nav': {
+            templateUrl: '/modules/nav/nav.html'
+          },
+          'body': {
+            templateUrl: '/modules/cart/cart.html'
+          }
+        }
+      })
+      .state('checkout', {
+        url: '/checkout',
+        views: {
+          'header': {
+            templateUrl: '/modules/checkout/checkout-header.html'
+          },
+          'body': {
+            templateUrl: '/modules/checkout/checkout.html'
           }
         }
       });
