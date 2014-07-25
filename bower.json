@@ -1,0 +1,20 @@
+{
+  "name": "bindoPos",
+  "version": "0.0.0",
+  "authors": [
+    "Marco Au <marco.au.321@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.20",
+    "angular-ui-router": "~0.2.10"
+  }
+}
