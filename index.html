@@ -2,16 +2,29 @@
 <html>
 <head>
   <title>Bindo POS</title>
+  <!-- Meyer's CSS reset -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+  <link rel='stylesheet' href='modules/app/app.css'>
+  <!-- <link rel='stylesheet' href='modules/header/header.css'> -->
+
 </head>
-<body ng-app='app'>
+<body ng-app='app' ng-controller='AppCtrl'>
   <div class='header' ui-view='header'></div>
   <div class='nav' ui-view='nav'></div>
   <div class='body' ui-view='body'></div>
 
   <script src='lib/angular/angular.min.js'></script>
+  <!-- Firebase -->
+  <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
   <script src='lib/angular-ui-router/release/angular-ui-router.min.js'></script>
 
   <script src='modules/app/app.js'></script>
+  <script src='modules/nav/nav.js'></script>
+  <script src='modules/shop/shop.js'></script>
+  <script src='modules/cart/cart.js'></script>
 
 
 </body>

@@ -1,1 +1,7 @@
-<h1>Cart</h1>
+<div ng-controller='CartCtrl'>
+  <h1>Cart</h1>
+  <div ng-repeat='product in cart'>
+    <p>{{product.name}}</p>
+    <p>{{product.price}}</p>
+  </div>
+</div>

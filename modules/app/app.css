@@ -1,0 +1,16 @@
+.header {
+  background-color: #ff983c;
+  height: 30px;
+  font: 400 12px Lato, sans-serif;
+  color: white; }
+  .header a {
+    padding: 5px 20px 5px 0;
+    color: white;
+    text-decoration: none; }
+  .header p {
+    float: right;
+    padding: 5px 20px 5px 0; }
+
+.container {
+  width: 940px;
+  margin: 0 auto 0 auto; }

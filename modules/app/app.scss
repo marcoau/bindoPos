@@ -1,0 +1,27 @@
+$main-color: rgb(255,121,0);
+$header-font: 400 12px Lato, sans-serif;
+$header-color: rgb(255,152,60);
+
+.header{
+  background-color: $header-color;
+  height: 30px;
+
+  font: $header-font;
+  color: white;
+
+  a{
+    padding: 5px 20px 5px 0;
+    color: white;
+    text-decoration: none;
+  }
+
+  p{
+    float: right;
+    padding: 5px 20px 5px 0;
+  }
+}
+
+.container{
+  width: 940px;
+  margin: 0 auto 0 auto;
+}

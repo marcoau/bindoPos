@@ -1,5 +1,9 @@
 var app = angular.module('app', [
-  'ui.router'
+  'firebase',
+  'ui.router',
+  'app.nav',
+  'app.shop',
+  'app.cart'
   ])
   .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider){
     $stateProvider
@@ -46,4 +50,8 @@ var app = angular.module('app', [
     $urlRouterProvider.otherwise('/shop');
     // $locationProvider.html5Mode(true);
 
-  }]);
+  }])
+  .controller('AppCtrl', ['$rootScope', '$firebase', function($rootScope, $firebase){
+    var cart = new Firebase('https://bindopos.firebaseio.com/cart');
+    $rootScope.cartRef = $firebase(cart);
+  }])
