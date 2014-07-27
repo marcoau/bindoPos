@@ -1,3 +1,8 @@
+body {
+  font-family: Lato, sans-serif; }
+  body a {
+    text-decoration: none; }
+
 .header {
   background-color: #ff983c;
   height: 30px;
@@ -5,11 +10,40 @@
   color: white; }
   .header a {
     padding: 5px 20px 5px 0;
-    color: white;
-    text-decoration: none; }
+    color: white; }
   .header p {
     float: right;
     padding: 5px 20px 5px 0; }
+
+.nav {
+  background-color: white;
+  height: 80px;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px; }
+  .nav ul, .nav li, .nav input, .nav a {
+    display: inline-block; }
+  .nav .nav-controls {
+    float: right; }
+  .nav a {
+    margin-top: 25px;
+    padding: 5px 15px;
+    color: #aea59e; }
+  .nav a:hover {
+    color: #5e4b3d; }
+  .nav .a-logo {
+    width: 140px;
+    height: 43px;
+    background-image: url("/../img/bindo-pos-logo.png");
+    background-repeat: no-repeat; }
+  .nav .a-cart {
+    height: 21px;
+    line-height: 21px;
+    background-color: #ff7900;
+    border-radius: 4px;
+    color: white; }
+  .nav .a-cart:hover {
+    background-color: #ff983c;
+    color: white; }
 
 .container {
   width: 940px;

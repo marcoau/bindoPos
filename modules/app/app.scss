@@ -1,23 +1,78 @@
 $main-color: rgb(255,121,0);
+$font: Lato, sans-serif;
 $header-font: 400 12px Lato, sans-serif;
 $header-color: rgb(255,152,60);
+$header-text-color: white;
+
+body{
+  font-family: $font;
+  a{
+    text-decoration: none;
+  }
+}
 
 .header{
   background-color: $header-color;
   height: 30px;
 
   font: $header-font;
-  color: white;
+  color: $header-text-color;
 
   a{
     padding: 5px 20px 5px 0;
-    color: white;
-    text-decoration: none;
+    color: $header-text-color;
   }
 
   p{
     float: right;
     padding: 5px 20px 5px 0;
+  }
+}
+
+.nav{
+  background-color: white;
+  height: 80px;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px;
+
+  ul, li, input, a{
+    display: inline-block;
+  }
+
+  .nav-controls{
+    float: right;
+  }
+
+  a{
+    margin-top: 25px;
+    padding: 5px 15px;
+    color: rgb(174, 165, 158);
+  }
+
+  a:hover{
+    color: rgb(94, 75, 61);
+  }
+
+  .a-logo{
+    width: 140px;
+    height: 43px;
+    background-image: url('/../img/bindo-pos-logo.png');
+    background-repeat: no-repeat;
+
+  }
+
+  .a-cart{
+
+    height: 21px;
+    line-height: 21px;
+    background-color: $main-color;
+    border-radius: 4px;
+
+    color: $header-text-color;
+  }
+  .a-cart:hover{
+    background-color: $header-color;
+    color: $header-text-color;    
   }
 }
 

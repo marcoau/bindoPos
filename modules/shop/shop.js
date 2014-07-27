@@ -2,7 +2,11 @@ angular.module('app.shop', [])
   .controller('ShopCtrl', ['$rootScope', '$scope', '$firebase', function($rootScope, $scope, $firebase){
     
     $scope.addToCart = function(product){
-      $rootScope.cartRef.$add(product);
+      $rootScope.cartRef.$add({
+        name: product.name,
+        price: product.price,
+        quantity: 1
+      });
       console.log('add ' + product.name + ' to cart');
     };
 
