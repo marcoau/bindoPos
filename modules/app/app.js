@@ -54,4 +54,6 @@ var app = angular.module('app', [
   .controller('AppCtrl', ['$rootScope', '$firebase', function($rootScope, $firebase){
     var cart = new Firebase('https://bindopos.firebaseio.com/cart');
     $rootScope.cartRef = $firebase(cart);
+    // bind firebase to $rootScope.cart
+    $rootScope.cartRef.$bind($rootScope, 'cart');
   }])

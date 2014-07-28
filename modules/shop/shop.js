@@ -5,14 +5,14 @@ angular.module('app.shop', [])
       $rootScope.cartRef.$add({
         name: product.name,
         price: product.price,
-        quantity: 1
+        quantity: 2
       });
       console.log('add ' + product.name + ' to cart');
     };
 
     $scope.products = [
-      {name: 'Business Pro Bundle', price: 1499.99},
-      {name: 'Business Bundle', price: 999.99}
+      {name: 'Business Pro Bundle', price: 1499.01},
+      {name: 'Business Bundle', price: 999.01}
     ];
 
   }]);

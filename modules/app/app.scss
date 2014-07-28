@@ -1,10 +1,13 @@
 $main-color: rgb(255,121,0);
 $font: Lato, sans-serif;
 $header-font: 400 12px Lato, sans-serif;
+$nav-font: 700 14px Lato, sans-serif;
+$body-font: 400 16px Lato, sans-serif;
 $header-color: rgb(255,152,60);
 $header-text-color: white;
 
 body{
+  background-color: rgb(247,246,244);
   font-family: $font;
   a{
     text-decoration: none;
@@ -32,7 +35,7 @@ body{
 .nav{
   background-color: white;
   height: 80px;
-  font-size: 14px;
+  font: $nav-font;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px;
 
   ul, li, input, a{
@@ -48,9 +51,15 @@ body{
     padding: 5px 15px;
     color: rgb(174, 165, 158);
   }
-
   a:hover{
     color: rgb(94, 75, 61);
+  }
+
+  input{
+    height: 24px;
+    line-height: 24px;
+    border: 2px solid rgb(215,215,215);
+    border-radius: 12px;
   }
 
   .a-logo{
@@ -58,11 +67,8 @@ body{
     height: 43px;
     background-image: url('/../img/bindo-pos-logo.png');
     background-repeat: no-repeat;
-
   }
-
   .a-cart{
-
     height: 21px;
     line-height: 21px;
     background-color: $main-color;
@@ -79,4 +85,89 @@ body{
 .container{
   width: 940px;
   margin: 0 auto 0 auto;
+}
+
+.cart{
+  h2{
+    font-size: 36px;
+    padding: 25px 0;
+  }
+  table{
+    margin: 25px 0 30px 0;
+    text-align: left;
+    font: $body-font;
+    
+    th{
+      width: 100px;
+      background-color: rgb(230, 223, 217);
+      padding: 10px 25px;
+      color: rgb(147,132,132);
+      text-transform: uppercase;
+    }
+    .table-description{
+      width: 450px;
+    }
+    td{
+      padding: 10px 25px;
+      text-align: left;
+    }
+    tr{
+      height: 100px;
+    }
+
+    select{
+      background-color: white;
+      border: 2px solid rgb(230,230,230);
+      font-size: 14px;
+      height: 28px;
+      width: 70px;
+      line-height: 28px;
+    }
+
+    .titles{
+      height: 40px;
+    }
+    .table-body{
+      background-color: white;
+      border-bottom: 1px solid rgb(225,225,225);
+    }
+
+    .table-body:last-child{
+      border-bottom: 0;
+    }
+    .table-remove{
+      background: transparent;
+      border: 0;
+      padding: 0;
+      font: $body-font;
+      font-weight: 700;
+      color: red;
+    }
+  }
+}
+.total{
+  div{
+    display: inline-block;
+  }
+  .total-right{
+    float: right;
+    font-size: 18px;
+    font-weight: 700;
+    
+    p, .button-checkout{
+      display: inline;
+    }
+  
+    .button-checkout{
+      background-color: $main-color;
+      border-radius: 7px;
+      border: 0;
+      padding: 10px 30px;
+
+      margin-left: 15px;
+
+      color: white;
+      font-size: 18px;
+    }
+  }
 }

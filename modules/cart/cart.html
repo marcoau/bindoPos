@@ -1,7 +1,38 @@
-<div ng-controller='CartCtrl'>
-  <h1>Cart</h1>
-  <div ng-repeat='product in cart'>
-    <p>{{product.name}}</p>
-    <p>{{product.price}}</p>
-  </div>
+<div class='cart container' ng-controller='CartCtrl' ng-init='bind()'>
+  <h2>Cart (5 items)</h2>
+  <table>
+    <tbody>
+      <tr class='titles'>
+        <th class='table-description'>DESCRIPTION</th>
+        <th>PRICE</th>
+        <th>QUANTITY</th>
+        <th>TOTAL</th>
+        <th>REMOVE</th>
+      </tr>
+      <tr class='table-body' ng-repeat='(id, product) in cart'>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>
+          <select class='table-select' ng-model='product.quantity'>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+          </select>
+        </td>
+        <td>{{product.price * product.quantity}}</td>
+        <td><button class='table-remove' ng-click='removeFromCart(id)'>Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class='total'>
+    <div class='total-left'>
+      <p>Free shipping & free 30-day returns guarantee</p>
+    </div>
+    <div class='total-right'>
+      <p>${{total}}</p>
+      <button class='button-checkout'>Checkout</button>
+    </div>
+
 </div>
