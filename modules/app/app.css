@@ -1,6 +1,7 @@
 body {
   background-color: #f7f6f4;
-  font-family: Lato, sans-serif; }
+  font-family: Lato, sans-serif;
+  color: #5e4b3d; }
   body a {
     text-decoration: none; }
 
@@ -8,13 +9,12 @@ body {
   background-color: #ff983c;
   height: 30px;
   font: 400 12px Lato, sans-serif;
-  color: white; }
+  color: white;
+  line-height: 30px; }
   .header a {
-    padding: 5px 20px 5px 0;
     color: white; }
   .header p {
-    float: right;
-    padding: 5px 20px 5px 0; }
+    float: right; }
 
 .nav {
   background-color: white;
@@ -35,7 +35,10 @@ body {
     height: 24px;
     line-height: 24px;
     border: 2px solid #d7d7d7;
-    border-radius: 12px; }
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 2px 10px;
+    margin: 0 20px 0 15px; }
   .nav .a-logo {
     width: 140px;
     height: 43px;
@@ -78,10 +81,12 @@ body {
   .cart table select {
     background-color: white;
     border: 2px solid #e6e6e6;
+    border-radius: 6px;
     font-size: 14px;
     height: 28px;
     width: 70px;
-    line-height: 28px; }
+    line-height: 28px;
+    color: #5e4b3d; }
   .cart table .titles {
     height: 40px; }
   .cart table .table-body {
@@ -99,6 +104,8 @@ body {
 
 .total div {
   display: inline-block; }
+.total .total-left p {
+  padding-top: 10px; }
 .total .total-right {
   float: right;
   font-size: 18px;
@@ -110,6 +117,6 @@ body {
     border-radius: 7px;
     border: 0;
     padding: 10px 30px;
-    margin-left: 15px;
+    margin-left: 20px;
     color: white;
     font-size: 18px; }
