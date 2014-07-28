@@ -3,11 +3,34 @@ $main-text-color: rgb(94, 75, 61);
 $font: Lato, sans-serif;
 $header-font: 400 12px Lato, sans-serif;
 $nav-font: 700 14px Lato, sans-serif;
-$body-font: 400 16px Lato, sans-serif;
+$body-font: 400 18px Lato, sans-serif;
 $header-color: rgb(255,152,60);
 $header-text-color: white;
+$border: 1px solid rgb(225,225,225);
+
+@mixin placeholder($color){
+
+  ::-webkit-input-placeholder {
+     color: $color;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    color: $color;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: $color;
+  }
+
+  :-ms-input-placeholder {  
+    color: $color;
+  }
+}
+@include placeholder(rgb(217,213,210));
+
 
 body{
+  position: relative;
   background-color: rgb(247,246,244);
   font-family: $font;
   color: $main-text-color;
@@ -32,7 +55,12 @@ body{
     float: right;
   }
 }
+.container{
+  width: 940px;
+  margin: 0 auto 0 auto;
+}
 
+/* NAV */
 .nav{
   background-color: white;
   height: 80px;
@@ -88,18 +116,19 @@ body{
   }
 }
 
-.container{
-  width: 940px;
-  margin: 0 auto 0 auto;
+
+.content{
+  margin-bottom: 80px;
 }
 
+/* CART */
 .cart{
   h2{
     font-size: 36px;
     padding: 25px 0;
   }
   table{
-    margin: 25px 0 30px 0;
+    margin: 10px 0 30px 0;
     text-align: left;
     font: $body-font;
     
@@ -134,12 +163,13 @@ body{
 
     }
 
-    .titles{
+    .table-titles{
       height: 40px;
+      font-size: 16px;
     }
     .table-body{
       background-color: white;
-      border-bottom: 1px solid rgb(225,225,225);
+      border-top: $border;
     }
 
     .table-body:last-child{
@@ -155,6 +185,36 @@ body{
     }
   }
 }
+.banner{
+  // height: 160px;
+  // background-color: white;
+  border-top: $border;
+
+  .banner-block{
+    height: 160px;
+    vertical-align: text-top;
+
+    color: $main-text-color;
+
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+
+    h3{
+      margin-top: 30px;
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 700;
+    }
+    h4{
+      margin-top: 30px;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 700;
+    }
+  }
+}
+
 .total{
   div{
     display: inline-block;
@@ -183,6 +243,243 @@ body{
 
       color: white;
       font-size: 18px;
+    }
+  }
+}
+
+.footer{
+  border-top: $border;
+
+  .footer-nav{
+    display: inline;
+    ul, li{
+      display: inline-block;
+    }
+    ul{
+      padding: 40px 0;
+    }
+    li{
+      margin-right: 20px;
+      a{
+        color: $main-text-color;        
+      }
+    }
+  }
+
+  .footer-disclaimer{
+    display: inline-block;
+
+    float: right;
+    text-align: right;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 40px 0;
+  }
+}
+
+/* CHECKOUT */
+.checkout-header{
+  height: 60px;
+  background-color: white;
+
+  border-bottom: $border;
+  text-align: center;
+
+  img{
+    width: 80px;
+    margin-top: 15px;
+  }
+}
+.checkout-progress{
+  height: 140px;
+  width: 740px;
+  margin: 0 auto;
+  ul{
+    text-align: center;
+    margin-top: 20px;
+    li{
+      display: inline-block;
+      margin: 10px 50px;
+      color: rgb(181,171,162);
+      font-size: 12px;
+    }
+  }
+  .progress-bar{
+    position: relative;
+    width: 740px;
+    height: 12px;
+
+    .progress-bar-back{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 740px;
+      height: 12px;
+      background-color: rgb(229,222,214);
+      border-radius: 12px;
+    }
+
+    .progress-bar-front{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 370px;
+      height: 12px;
+      background-color: rgb(132,217,184);
+      border-radius: 12px;
+
+    }
+  }
+}
+.checkout-container{
+
+  text-align: center;
+  >div{
+    display: inline-block;
+    vertical-align: text-top;
+    text-align: left;
+  }
+
+  .order-summary{
+    width: 450px;
+    background-color: white;
+    margin-right: 85px;
+
+    .order-summary-title{
+      height: 40px;
+      background-color: rgb(201,188,179);
+      color: white;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 40px;
+    }
+
+    .order-summary-item{
+      width: 370px;
+      margin: 0 auto;
+      padding: 20px 0;
+      text-align: left;
+      border-bottom: $border;
+
+      .item-category{
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 36px;
+      }
+
+      .item-name{
+        margin: 5px 0;
+        font-size: 18px;
+        line-height: 36px;
+      }
+
+      .item-description{
+        font-size: 16px;
+        line-height: 20px;
+        color: rgb(181,171,162);
+      }
+
+      .item-quantity{
+        display: inline-block;
+        width: 50%;
+        font-size: 18px;
+        line-height: 36px;
+        select{
+          background-color: rgb(240,237,232);
+          margin-left: 10px;
+          border: 0;
+          border-radius: 6px;
+          font-size: 16px;
+          height: 28px;
+          width: 70px;
+          line-height: 28px;
+
+          color: $main-text-color;
+        }
+      }
+
+      .item-sum{
+        display: inline-block;
+
+        float: right;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 36px;
+      }
+    }
+
+    .order-summary-sum{
+      width: 370px;
+      margin: 0 auto;
+      padding: 20px 0;
+
+      text-align: left;
+      font-size: 18px;
+      line-height: 36px;
+
+      .sum-amount{
+        float: right;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 36px;
+      }
+    }
+  }
+
+  .checkout-information{
+    width: 470px;
+    
+    h2{
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
+    div{
+      width: 100%;
+      margin-bottom: 25px;
+
+      input{
+        display: inline-block;
+        width: 446px;
+        background-color: white;
+        border: 2px solid rgb(225,218,210);
+        border-radius: 6px;
+        margin: 10px 0;
+        padding: 10px;
+
+        font-size: 14px;
+        color: $main-text-color;
+      }
+      .input-street, .input-zip, .input-city{
+        margin-right: 17px;
+      }
+      .input-street{
+        width: 306px;
+      }
+      .input-city{
+        width: 186px;
+      }
+      .input-small{
+        width: 96px;
+      }
+      .input-zip{
+        width: 76px;
+      }
+    }
+
+    .shipping-continue{
+      float: right;
+      height: 40px;
+      width: 230px;
+      background-color: $main-color;
+      border: 0;
+      border-radius: 4px;
+      padding: 0;
+
+      line-height: 40px;
+
+      font-size: 16px;
+      color: $header-text-color;
     }
   }
 }

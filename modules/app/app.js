@@ -3,7 +3,8 @@ var app = angular.module('app', [
   'ui.router',
   'app.nav',
   'app.shop',
-  'app.cart'
+  'app.cart',
+  'app.checkout'
   ])
   .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider){
     $stateProvider
@@ -14,10 +15,14 @@ var app = angular.module('app', [
             templateUrl: '/modules/header/header.html'
           },
           'nav': {
-            templateUrl: '/modules/nav/nav.html'
+            templateUrl: '/modules/nav/nav.html',
+            controller: 'NavCtrl'
           },
           'body': {
             templateUrl: '/modules/shop/shop.html'
+          },
+          'footer': {
+            templateUrl: '/modules/footer/footer.html'
           }
         }
       })
@@ -28,21 +33,45 @@ var app = angular.module('app', [
             templateUrl: '/modules/header/header.html'
           },
           'nav': {
-            templateUrl: '/modules/nav/nav.html'
+            templateUrl: '/modules/nav/nav.html',
+            controller: 'NavCtrl'
           },
           'body': {
-            templateUrl: '/modules/cart/cart.html'
+            templateUrl: '/modules/cart/cart.html',
+            controller: 'CartCtrl'
+          },
+          'footer': {
+            templateUrl: '/modules/footer/footer.html'
           }
         }
       })
       .state('checkout', {
         url: '/checkout',
         views: {
-          'header': {
-            templateUrl: '/modules/checkout/checkout-header.html'
+          'nav': {
+            template: '<div></div>'
           },
           'body': {
-            templateUrl: '/modules/checkout/checkout.html'
+            templateUrl: '/modules/checkout/checkout.html',
+            controller: 'CheckoutCtrl'
+          }
+        }
+      })
+      .state('checkout.shipping', {
+        url: '/checkout/shipping',
+
+        views: {
+          'information': {
+            templateUrl: '/modules/checkout/information/shipping-information.html'
+          }
+        }
+      })
+      .state('checkout.billing', {
+        url: '/checkout/billing',
+
+        views: {
+          'information': {
+            templateUrl: '/modules/checkout/information/billing-information.html'
           }
         }
       });
@@ -51,9 +80,21 @@ var app = angular.module('app', [
     // $locationProvider.html5Mode(true);
 
   }])
-  .controller('AppCtrl', ['$rootScope', '$firebase', function($rootScope, $firebase){
+  .controller('AppCtrl', ['$rootScope', '$scope', '$firebase', function($rootScope, $scope, $firebase){
     var cart = new Firebase('https://bindopos.firebaseio.com/cart');
     $rootScope.cartRef = $firebase(cart);
     // bind firebase to $rootScope.cart
     $rootScope.cartRef.$bind($rootScope, 'cart');
+
+    $scope.updateTotal = function(){
+      var keys = $rootScope.cartRef.$getIndex();
+      var total = 0;
+      angular.forEach(keys, function(key){
+        total += $rootScope.cart[key].price * $rootScope.cart[key].quantity;        
+      })
+      $rootScope.total = total;
+    };
+
+    $rootScope.cartRef.$on('value', $scope.updateTotal);
+
   }])
