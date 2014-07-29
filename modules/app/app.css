@@ -282,6 +282,18 @@ body {
         font-size: 22px;
         font-weight: 700;
         line-height: 36px; }
+    .checkout-container .order-summary .order-summary-details {
+      width: 370px;
+      margin: 0 auto;
+      padding: 10px 0;
+      text-align: left;
+      border-bottom: 1px solid #e1e1e1; }
+      .checkout-container .order-summary .order-summary-details > div {
+        margin: 10px 0; }
+      .checkout-container .order-summary .order-summary-details .details-title {
+        color: #b5aba2; }
+      .checkout-container .order-summary .order-summary-details .details-info {
+        float: right; }
     .checkout-container .order-summary .order-summary-sum {
       width: 370px;
       margin: 0 auto;
@@ -312,9 +324,9 @@ body {
         padding: 10px;
         font-size: 14px;
         color: #5e4b3d; }
-      .checkout-container .checkout-information div .input-street, .checkout-container .checkout-information div .input-zip, .checkout-container .checkout-information div .input-city {
+      .checkout-container .checkout-information div .input-street, .checkout-container .checkout-information div .input-large, .checkout-container .checkout-information div .input-zip, .checkout-container .checkout-information div .input-city {
         margin-right: 17px; }
-      .checkout-container .checkout-information div .input-street {
+      .checkout-container .checkout-information div .input-street, .checkout-container .checkout-information div .input-large {
         width: 306px; }
       .checkout-container .checkout-information div .input-city {
         width: 186px; }
@@ -322,14 +334,21 @@ body {
         width: 96px; }
       .checkout-container .checkout-information div .input-zip {
         width: 76px; }
-    .checkout-container .checkout-information .shipping-continue {
-      float: right;
-      height: 40px;
-      width: 230px;
-      background-color: #ff7900;
-      border: 0;
-      border-radius: 4px;
-      padding: 0;
-      line-height: 40px;
-      font-size: 16px;
-      color: white; }
+    .checkout-container .checkout-information .billing-top {
+      border-bottom: 1px solid #e1e1e1; }
+    .checkout-container .checkout-information .billing-button {
+      border-bottom: 1px solid #e1e1e1;
+      height: 80px; }
+      .checkout-container .checkout-information .billing-button .button-continue {
+        float: right;
+        height: 40px;
+        width: 230px;
+        background-color: #ff7900;
+        border: 0;
+        border-radius: 4px;
+        padding: 0;
+        line-height: 40px;
+        font-size: 16px;
+        color: white; }
+    .checkout-container .checkout-information .information-bottom {
+      text-align: right; }

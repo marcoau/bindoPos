@@ -1,20 +1,24 @@
 <div class='shipping-information'>
   <h2>Shipping Information</h2>
   <div>
-    <input placeholder='Full name' \>
+    <input ng-model='shippingInfo.name' placeholder='Full name' \>
   </div>
   <div>
-    <input class='input-street' placeholder='Street address' \>
-    <input class='input-small' placeholder='Apt / Suite' \>
-    <input class='input-zip' placeholder='ZIP code' \>
-    <input class='input-city' placeholder='City' \>
-    <input class='input-small' placeholder='State' \>
+    <input class='input-street' ng-model='shippingInfo.streetAddress' placeholder='Street address' \>
+    <input class='input-small' ng-model='shippingInfo.apt' placeholder='Apt / Suite' \>
+    <input class='input-zip' ng-model='shippingInfo.zip' placeholder='ZIP code' \>
+    <input class='input-city' ng-model='shippingInfo.city' placeholder='City' \>
+    <input class='input-small' ng-model='shippingInfo.state' placeholder='State' \>
   </div>
   <div>
-    <input placeholder='Email address' \>
-    <input placeholder='Phone number' \>
+    <input ng-model='shippingInfo.email' placeholder='Email address' \>
+    <input ng-model='shippingInfo.phone' placeholder='Phone number' \>
   </div>
-  <div>
-    <button class='shipping-continue' ng-click='shippingContinue()'>Continue</button>
+  <div class='billing-button'>
+    <button class='button-continue' ng-click='shippingContinue()'>Continue</button>
+  </div>
+
+  <div class='information-bottom'>
+    <p>Need help? Call our specialist at 1-800-My-Bindo</p>
   </div>
 </div>

@@ -1,3 +1,27 @@
 <div class='billing-information'>
-  <h2>Billing Information</h2>
+  <div class='billing-top'>
+    <h2>Billing Information</h2>
+    <div>
+      <input class='input-large' ng-model='paymentInfo.card' placeholder='Card number' \>
+      <input class='input-small' ng-model='paymentInfo.expire' placeholder='MM/YY' \>
+      <input class='input-large' ng-model='paymentInfo.name' placeholder='Name on card' \>
+      <input class='input-small' ng-model='paymentInfo.cvc' placeholder='CVC code' \>
+    </div>
+  </div>
+  <div>
+    <h2>Billing address</h2>
+    <div>
+      <input class='input-street' ng-model='shippingInfo.streetAddress' placeholder='Street address' \>
+      <input class='input-small' ng-model='shippingInfo.apt' placeholder='Apt / Suite' \>
+      <input class='input-zip' ng-model='shippingInfo.zip' placeholder='ZIP code' \>
+      <input class='input-city' ng-model='shippingInfo.city' placeholder='City' \>
+      <input class='input-small' ng-model='shippingInfo.state' placeholder='State' \>
+    </div>
+    <div class='billing-button'>
+      <button class='button-continue' ng-click='billingContinue()'>Continue</button>
+    </div>
+  </div>
+  <div class='information-bottom'>
+    <p>Need help? Call our specialist at 1-800-My-Bindo</p>
+  </div>
 </div>

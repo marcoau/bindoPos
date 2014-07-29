@@ -6,4 +6,6 @@ angular.module('app.checkout', [])
 
     $state.go('checkout.shipping');
 
+    $scope.shippingInfo = {};
+
   }]);

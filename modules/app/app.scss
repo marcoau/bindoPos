@@ -409,6 +409,25 @@ body{
       }
     }
 
+    .order-summary-details{
+      width: 370px;
+      margin: 0 auto;
+      padding: 10px 0;
+      text-align: left;
+      border-bottom: $border;
+
+      >div{
+        margin: 10px 0;
+      }
+      .details-title{
+        color: rgb(181,171,162);
+      }
+
+      .details-info{
+        float: right;
+      }
+    }
+
     .order-summary-sum{
       width: 370px;
       margin: 0 auto;
@@ -425,6 +444,8 @@ body{
         line-height: 36px;
       }
     }
+
+
   }
 
   .checkout-information{
@@ -438,6 +459,7 @@ body{
       width: 100%;
       margin-bottom: 25px;
 
+
       input{
         display: inline-block;
         width: 446px;
@@ -450,10 +472,10 @@ body{
         font-size: 14px;
         color: $main-text-color;
       }
-      .input-street, .input-zip, .input-city{
+      .input-street, .input-large, .input-zip, .input-city{
         margin-right: 17px;
       }
-      .input-street{
+      .input-street, .input-large{
         width: 306px;
       }
       .input-city{
@@ -467,19 +489,33 @@ body{
       }
     }
 
-    .shipping-continue{
-      float: right;
-      height: 40px;
-      width: 230px;
-      background-color: $main-color;
-      border: 0;
-      border-radius: 4px;
-      padding: 0;
+    .billing-top{
+      border-bottom: $border;
+    }
 
-      line-height: 40px;
+    .billing-button{
+      border-bottom: $border;
+      height: 80px;
 
-      font-size: 16px;
-      color: $header-text-color;
+      .button-continue{
+        float: right;
+        height: 40px;
+        width: 230px;
+        background-color: $main-color;
+        border: 0;
+        border-radius: 4px;
+        padding: 0;
+
+        line-height: 40px;
+
+        font-size: 16px;
+        color: $header-text-color;
+      }
+    }
+
+
+    .information-bottom{
+      text-align: right;
     }
   }
 }
