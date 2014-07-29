@@ -1,0 +1,34 @@
+<div class='confirm-information'>
+  <h2>Confirm your order details</h2>
+  <div class='confirm-row'>
+    <div>
+      <h3><span>Shipping information</span><span class='confirm-edit' ng-click='goToShipping()'>Edit</span></h3>
+      <p>{{shippingInfo.name}}</p>
+      <p>{{shippingInfo.streetAddress}}, {{shippingInfo.apt}}</p>
+      <p>{{shippingInfo.city}}, {{shippingInfo.state}}</p>
+      <p>{{shippingInfo.zip}}</p>
+    </div>
+  </div>
+  <div class='confirm-row'>
+    <div class='confirm-row-half'>
+      <h3><span>Payment information</span><span class='confirm-edit' ng-click='goToBilling()'>Edit</span></h3>
+      <p>{{paymentInfo.name}}</p>
+      <p>{{paymentInfo.cardNumber}}</p>
+      <p>Expires on: {{paymentInfo.expire}}</p>
+    </div>
+    <div class='confirm-row-half'>
+      <h3><span>Billing address</span><span class='confirm-edit' ng-click='goToBilling()'>Edit</span></h3>
+      <p>{{billingInfo.name}}</p>
+      <p>{{billingInfo.streetAddress}}, {{billingInfo.apt}}</p>
+      <p>{{billingInfo.city}}, {{billingInfo.state}}</p>
+      <p>{{billingInfo.zip}}</p>
+    </div>
+  </div>
+  <div class='billing-button'>
+    <button class='button-confirm' ng-click='goToThankyou()'>Confirm order</button>
+  </div>
+  <div class='information-bottom'>
+    <p>Need help? Call our specialist at 1-800-My-Bindo</p>
+  </div>
+
+</div>

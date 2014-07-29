@@ -1,0 +1,40 @@
+<div class='thankyou-information'>
+  <div class='thankyou-title'>
+    <h2>Thank you for your order.</h2>
+  </div>
+  <div class='thankyou-content'>
+    <div class='confirm-row'>
+      <div>
+        <h3>Order details</h3>
+        <p>Order number: #12345</p>
+        <p>Estimated shipping date: 5-7 business days</p>
+        <p>An email confirmation will be sent to:</p>
+        <p>{{shippingInfo.email}}</p>
+      </div>
+    </div>
+    <div class='confirm-row'>
+      <div>
+        <h3>Shipping information</h3>
+        <p>{{shippingInfo.name}}</p>
+        <p>{{shippingInfo.streetAddress}}, {{shippingInfo.apt}}</p>
+        <p>{{shippingInfo.city}}, {{shippingInfo.state}}</p>
+        <p>{{shippingInfo.zip}}</p>
+      </div>
+    </div>
+    <div class='confirm-row'>
+      <div class='thankyou-row-half'>
+        <h3>Payment information</h3>
+        <p>{{paymentInfo.name}}</p>
+        <p>{{paymentInfo.cardNumber}}</p>
+        <p>Expires on: {{paymentInfo.expire}}</p>
+      </div>
+      <div class='thankyou-row-half'>
+        <h3>Billing address</h3>
+        <p>{{billingInfo.name}}</p>
+        <p>{{billingInfo.streetAddress}}, {{billingInfo.apt}}</p>
+        <p>{{billingInfo.city}}, {{billingInfo.state}}</p>
+        <p>{{billingInfo.zip}}</p>
+      </div>
+    </div>
+  </div>
+</div>

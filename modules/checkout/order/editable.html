@@ -1,0 +1,48 @@
+<div class='order-summary'>
+  
+  <div class='order-summary-title'>
+    <p>Order Summary</p>
+  </div>
+
+  <div class='order-summary-item' ng-repeat='(id, product) in cart'>
+    <h5><span class='item-category'>{{product.category}}: </span><span class='item-name'>{{product.name}}</span></h5>
+    <p class='item-description'>{{product.description}}</p>
+    <div>
+      <span class='item-quantity'>
+        Quantity: 
+        <select class='item-quantity-select' ng-model='product.quantity'>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+        </select>
+      </span>
+      <span class='item-sum'>
+        ${{product.price * product.quantity}}
+      </span>
+    </div>
+  </div>
+  
+  <div class='order-summary-details'>
+    <div>
+      <span class='details-title'>Subtotal</span>
+      <span class='details-info'>${{total}}</span>
+    </div>
+    <div>
+      <span class='details-title'>Tax</span>
+      <span class='details-info'>Calculated at checkout</span>
+    </div>
+    <div>
+      <span class='details-title'>Shipping</span>
+      <span class='details-info'>Free</span>
+    </div>
+
+  </div>
+
+  <div class='order-summary-sum'>
+    <span>Total</span>
+    <span class='sum-amount'>${{total}}</span>
+  </div>
+
+</div>

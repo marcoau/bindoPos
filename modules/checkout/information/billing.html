@@ -1,0 +1,28 @@
+<div class='billing-information'>
+  <div class='billing-top'>
+    <h2>Billing Information</h2>
+    <div>
+      <input class='input-large' ng-model='paymentInfo.cardNumber' placeholder='Card number' \>
+      <input class='input-small' ng-model='paymentInfo.expire' placeholder='MM/YY' \>
+      <input class='input-large' ng-model='paymentInfo.name' placeholder='Name on card' \>
+      <input class='input-small' ng-model='paymentInfo.cvc' placeholder='CVC code' \>
+    </div>
+  </div>
+  <div>
+    <h2>Billing address</h2>
+    <div>
+      <input type="checkbox" name="vehicle" ng-model='sameAsShipping' \> Same as shipping address<br>
+      <input class='input-street' ng-model='billingInfo.streetAddress' placeholder='Street address' \>
+      <input class='input-small' ng-model='billingInfo.apt' placeholder='Apt / Suite' \>
+      <input class='input-zip' ng-model='billingInfo.zip' placeholder='ZIP code' \>
+      <input class='input-city' ng-model='billingInfo.city' placeholder='City' \>
+      <input class='input-small' ng-model='billingInfo.state' placeholder='State' \>
+    </div>
+    <div class='billing-button'>
+      <button class='button-continue' ng-click='goToConfirm()'>Continue</button>
+    </div>
+  </div>
+  <div class='information-bottom'>
+    <p>Need help? Call our specialist at 1-800-My-Bindo</p>
+  </div>
+</div>

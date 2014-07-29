@@ -310,7 +310,12 @@ body {
     width: 470px; }
     .checkout-container .checkout-information h2 {
       font-size: 24px;
+      font-weight: 700;
       margin-bottom: 25px; }
+    .checkout-container .checkout-information h3 {
+      margin: 5px 0;
+      font-size: 16px;
+      color: #b5aba2; }
     .checkout-container .checkout-information div {
       width: 100%;
       margin-bottom: 25px; }
@@ -339,7 +344,7 @@ body {
     .checkout-container .checkout-information .billing-button {
       border-bottom: 1px solid #e1e1e1;
       height: 80px; }
-      .checkout-container .checkout-information .billing-button .button-continue {
+      .checkout-container .checkout-information .billing-button button {
         float: right;
         height: 40px;
         width: 230px;
@@ -352,3 +357,47 @@ body {
         color: white; }
     .checkout-container .checkout-information .information-bottom {
       text-align: right; }
+    .checkout-container .checkout-information .confirm-information p {
+      font-size: 16px;
+      line-height: 21px; }
+    .checkout-container .checkout-information .confirm-information .confirm-edit {
+      margin-left: 15px;
+      color: #ff7900; }
+    .checkout-container .checkout-information .confirm-information .confirm-row {
+      border-bottom: 1px solid #e1e1e1; }
+      .checkout-container .checkout-information .confirm-information .confirm-row > div {
+        margin: 0 15px 25px 0;
+        vertical-align: text-top;
+        display: inline-block; }
+      .checkout-container .checkout-information .confirm-information .confirm-row .confirm-row-half {
+        width: 225px; }
+      .checkout-container .checkout-information .confirm-information .confirm-row > div:last-child {
+        margin-right: 0; }
+    .checkout-container .checkout-information .thankyou-information .thankyou-title {
+      width: 500px;
+      height: 100px;
+      background-color: #ff983c;
+      color: white;
+      text-align: center;
+      margin: 0; }
+      .checkout-container .checkout-information .thankyou-information .thankyou-title h2 {
+        font-size: 32px;
+        line-height: 100px;
+        margin: 0; }
+    .checkout-container .checkout-information .thankyou-information .thankyou-content {
+      background-color: white;
+      width: 440px;
+      padding: 30px; }
+      .checkout-container .checkout-information .thankyou-information .thankyou-content p {
+        font-size: 16px;
+        line-height: 21px; }
+      .checkout-container .checkout-information .thankyou-information .thankyou-content .confirm-row {
+        border-bottom: 1px solid #e1e1e1; }
+        .checkout-container .checkout-information .thankyou-information .thankyou-content .confirm-row > div {
+          margin: 0 15px 25px 0;
+          vertical-align: text-top;
+          display: inline-block; }
+        .checkout-container .checkout-information .thankyou-information .thankyou-content .confirm-row .thankyou-row-half {
+          width: 200px; }
+        .checkout-container .checkout-information .thankyou-information .thankyou-content .confirm-row > div:last-child {
+          margin-right: 0; }

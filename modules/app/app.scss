@@ -453,7 +453,14 @@ body{
     
     h2{
       font-size: 24px;
+      font-weight: 700;
       margin-bottom: 25px;
+    }
+
+    h3{
+      margin: 5px 0;
+      font-size: 16px;
+      color: rgb(181,171,162);
     }
     div{
       width: 100%;
@@ -497,7 +504,7 @@ body{
       border-bottom: $border;
       height: 80px;
 
-      .button-continue{
+      button{
         float: right;
         height: 40px;
         width: 230px;
@@ -516,6 +523,74 @@ body{
 
     .information-bottom{
       text-align: right;
+    }
+
+    .confirm-information{
+      p{
+        font-size: 16px;
+        line-height: 21px;
+      }
+      .confirm-edit{
+        margin-left: 15px;
+        color: $main-color;
+      }
+
+      .confirm-row{
+        border-bottom: $border;
+
+        >div{
+          margin: 0 15px 25px 0;
+          vertical-align: text-top;
+          display: inline-block;
+        }
+        .confirm-row-half{
+          width: 225px;
+        }
+
+        >div:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+
+    .thankyou-information{
+      .thankyou-title{
+        width: 500px;
+        height: 100px;
+        background-color: $header-color;
+        color: white;
+        text-align: center;
+        margin: 0;
+        h2{
+          font-size: 32px;
+          line-height: 100px;
+          margin: 0;        
+        }
+      }
+      .thankyou-content{
+        background-color: white;
+        width: 440px;
+        padding: 30px;
+        p{
+          font-size: 16px;
+          line-height: 21px;
+        }
+        .confirm-row{
+          border-bottom: $border;
+
+          >div{
+            margin: 0 15px 25px 0;
+            vertical-align: text-top;
+            display: inline-block;
+          }
+          .thankyou-row-half{
+            width: 200px;
+          }
+          >div:last-child{
+            margin-right: 0;
+          }
+        }       
+      }
     }
   }
 }

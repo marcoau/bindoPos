@@ -61,8 +61,11 @@ var app = angular.module('app', [
         url: '/checkout/shipping',
 
         views: {
+          'order': {
+            templateUrl: '/modules/checkout/order/editable.html'
+          },
           'information': {
-            templateUrl: '/modules/checkout/information/shipping-information.html'
+            templateUrl: '/modules/checkout/information/shipping.html'
           }
         }
       })
@@ -70,11 +73,39 @@ var app = angular.module('app', [
         url: '/checkout/billing',
 
         views: {
+          'order': {
+            templateUrl: '/modules/checkout/order/editable.html'
+          },
           'information': {
-            templateUrl: '/modules/checkout/information/billing-information.html'
+            templateUrl: '/modules/checkout/information/billing.html'
+          }
+        }
+      })
+      .state('checkout.confirm', {
+        url: '/checkout/confirm',
+
+        views: {
+          'order': {
+            templateUrl: '/modules/checkout/order/editable.html'
+          },
+          'information': {
+            templateUrl: '/modules/checkout/information/confirm.html'
+          }
+        }
+      })
+      .state('checkout.thankyou', {
+        url: '/checkout/thankyou',
+
+        views: {
+          'order': {
+            templateUrl: '/modules/checkout/order/final.html'
+          },
+          'information': {
+            templateUrl: '/modules/checkout/information/thankyou.html'
           }
         }
       });
+
 
     $urlRouterProvider.otherwise('/shop');
     // $locationProvider.html5Mode(true);
