@@ -290,6 +290,7 @@ body{
     margin-top: 15px;
   }
 }
+
 .checkout-progress{
   height: 140px;
   width: 740px;
@@ -323,14 +324,43 @@ body{
       position: absolute;
       top: 0;
       left: 0;
-      width: 370px;
+      // width: 370px;
       height: 12px;
       background-color: rgb(132,217,184);
       border-radius: 12px;
-
     }
+    .bar-shipping{
+      width: 185px;
+    }
+    .bar-billing{
+      width: 370px;
+    }
+    .bar-confirm{
+      width: 555px;
+    }
+
+    .progress-dot{
+      position: absolute;
+      top: -5px;
+      width: 20px;
+      height: 20px;
+      background-color: rgb(70,193,146);
+      border-radius: 10px;
+    }
+    .progress-dot-shipping{
+      left: 175px;
+    }
+    .progress-dot-billing{
+      left: 360px;
+    }
+    .progress-dot-confirm{
+      left: 545px;
+    }
+
+
   }
 }
+
 .checkout-container{
 
   text-align: center;
@@ -593,4 +623,13 @@ body{
       }
     }
   }
+}
+
+.checkout-footer{
+  width: 680px;
+  margin: 80px auto;
+  text-align: center;
+  border-top: $border;
+  padding: 20px;
+  color: rgb(181,171,162);
 }

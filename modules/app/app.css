@@ -220,10 +220,28 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      width: 370px;
       height: 12px;
       background-color: #84d9b8;
       border-radius: 12px; }
+    .checkout-progress .progress-bar .bar-shipping {
+      width: 185px; }
+    .checkout-progress .progress-bar .bar-billing {
+      width: 370px; }
+    .checkout-progress .progress-bar .bar-confirm {
+      width: 555px; }
+    .checkout-progress .progress-bar .progress-dot {
+      position: absolute;
+      top: -5px;
+      width: 20px;
+      height: 20px;
+      background-color: #46c192;
+      border-radius: 10px; }
+    .checkout-progress .progress-bar .progress-dot-shipping {
+      left: 175px; }
+    .checkout-progress .progress-bar .progress-dot-billing {
+      left: 360px; }
+    .checkout-progress .progress-bar .progress-dot-confirm {
+      left: 545px; }
 
 .checkout-container {
   text-align: center; }
@@ -401,3 +419,11 @@ body {
           width: 200px; }
         .checkout-container .checkout-information .thankyou-information .thankyou-content .confirm-row > div:last-child {
           margin-right: 0; }
+
+.checkout-footer {
+  width: 680px;
+  margin: 80px auto;
+  text-align: center;
+  border-top: 1px solid #e1e1e1;
+  padding: 20px;
+  color: #b5aba2; }

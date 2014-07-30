@@ -8,17 +8,21 @@
     <li>Confirm Order</li>
   </ul>
   <div class='progress-bar'>
+    {{$state.current}}
     <div class='progress-bar-back'></div>
-    <div class='progress-bar-front'></div>
+    <div class='progress-bar-front' ng-class='progressBarState[checkoutState]'></div>
+    <div class='progress-dot progress-dot-shipping' ng-show='checkoutState === "shipping"'></div>
+    <div class='progress-dot progress-dot-billing' ng-show='checkoutState === "billing"'></div>
+    <div class='progress-dot progress-dot-confirm' ng-show='checkoutState === "confirm"'></div>
+
   </div>
 </div>
+
 <div class='checkout-container'>
-  
-
   <div class='checkout-order' ui-view='order'></div>
-
   <div class='checkout-information' ui-view='information'></div>
+</div>
 
-
-
+<div class='checkout-footer'>
+  <p>© 2013 Bindo Labs, Inc. All rights reserved.</p>
 </div>
