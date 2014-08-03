@@ -1,0 +1,10 @@
+<div class='container'>
+  <h1>Shop</h1>
+
+  <div ng-repeat='product in products'>
+  <p>Name: {{product.name}}</p>
+  <p>Price: {{product.price}}</p>
+  <button ng-click='viewProduct(product)'>View Details</button>
+  <button ng-click='addToCart(product)'>Add To Cart</button>
+  </div>
+</div>

@@ -19,10 +19,28 @@ var app = angular.module('app', [
             controller: 'NavCtrl'
           },
           'body': {
-            templateUrl: '/modules/shop/shop.html'
+            templateUrl: '/modules/shop/shop.html',
+            controller: 'ShopCtrl'
+          },
+          'bottom-banner': {
+            templateUrl: '/modules/bottom-banner/bottom-banner.html'
           },
           'footer': {
             templateUrl: '/modules/footer/footer.html'
+          }
+        }
+      })
+      .state('shop.home', {
+        views: {
+          'content': {
+            templateUrl: '/modules/shop/content/home.html'
+          }
+        }
+      })
+      .state('shop.product', {
+        views: {
+          'content': {
+            templateUrl: '/modules/shop/content/product.html'
           }
         }
       })

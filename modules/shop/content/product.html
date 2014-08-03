@@ -1,0 +1,36 @@
+<div class='shop-product container'>
+  <div class='product-showcase'>
+    <img class='showcase-image' src='img/business-pro-bundle.png'>
+    <h2>{{currentProduct.name}}</h2>
+    <h3>{{currentProduct.tagline}}</h3>
+    <ul class='showcase-services'>
+      <li><img src='img/service-1.png'>30-day Free Returns Guarantee</li>
+      <li><img src='img/service-2.png'>Free shipping for all U.S. orders</li>
+      <li><img src='img/service-3.png'>Free tech support with actual human</li>
+    </ul>
+    <img class='showcase-cantdecide' src='img/cant-decide.png'>
+
+  </div>
+  <div class='product-details'>
+    <div>
+      <ul class='details-features'>
+        <li ng-repeat='feature in currentProduct.features'>
+          <h4>{{feature.type}}</h4>
+          <p>{{feature.detail}}</p>
+        </li>
+      </ul>
+    </div>
+    <div class='details-summary'>
+      <span class='summary-price'>{{currentProduct.price | currency : symbol}}</span>
+      <select class='summary-select' value='1'>
+        <option value='1'>1</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5</option>
+      </select>
+      <button class='summary-button'>Add to Cart</button>
+    </div>
+  </div>
+
+</div>
