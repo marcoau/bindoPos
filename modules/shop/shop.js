@@ -6,12 +6,6 @@ angular.module('app.shop', [])
       console.log('add ' + product.name + ' to cart');
     };
 
-    $scope.viewProduct = function(product){
-      $scope.currentProduct = product;
-      $state.go('shop.product');
-    };
-
-
     $scope.products = [
       {
         name: 'Business Pro Bundle',
@@ -59,7 +53,5 @@ angular.module('app.shop', [])
       }
     ];
     $scope.currentProduct = $scope.products[0];
-
-    $state.go('shop.home');
 
   }]);

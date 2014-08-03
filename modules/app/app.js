@@ -30,20 +30,20 @@ var app = angular.module('app', [
           }
         }
       })
-      .state('shop.home', {
-        views: {
-          'content': {
-            templateUrl: '/modules/shop/content/home.html'
-          }
-        }
-      })
-      .state('shop.product', {
-        views: {
-          'content': {
-            templateUrl: '/modules/shop/content/product.html'
-          }
-        }
-      })
+      // .state('shop.home', {
+      //   views: {
+      //     'content': {
+      //       templateUrl: '/modules/shop/content/home.html'
+      //     }
+      //   }
+      // })
+      // .state('shop.product', {
+      //   views: {
+      //     'content': {
+      //       templateUrl: '/modules/shop/content/product.html'
+      //     }
+      //   }
+      // })
       .state('cart', {
         url: '/cart',
         views: {
@@ -137,6 +137,7 @@ var app = angular.module('app', [
 
     $scope.updateTotal = function(){
       var keys = $rootScope.cartRef.$getIndex();
+      $rootScope.cartLength = keys.length;
       var total = 0;
       angular.forEach(keys, function(key){
         total += $rootScope.cart[key].price * $rootScope.cart[key].quantity;        
