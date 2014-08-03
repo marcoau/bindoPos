@@ -117,7 +117,7 @@ body{
 }
 
 .content{
-  margin-bottom: 80px;
+  // margin-bottom: 80px;
 }
 
 /* SHOP */
@@ -262,9 +262,11 @@ body{
 /* CART */
 .cart{
   background-color: rgb(247,246,244);
+  padding-bottom: 60px;
 }
 
 .cart-container{
+  padding-top: 60px;
   h2{
     font-size: 36px;
     padding: 25px 0;
@@ -333,6 +335,7 @@ body{
   border-top: $border;
 
   .banner-block{
+    position: relative;
     height: 160px;
     vertical-align: text-top;
 
@@ -354,10 +357,15 @@ body{
       line-height: 30px;
       font-weight: 700;
     }
+    .banner-img{
+      position: absolute;
+      left: 60px;
+      bottom: 0;
+    }
   }
 }
 
-.total{
+.cart-total{
   div{
     display: inline-block;
   }
