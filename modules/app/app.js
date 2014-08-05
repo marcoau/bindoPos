@@ -112,11 +112,13 @@ var app = angular.module('app', [
 
 
     $urlRouterProvider.otherwise('/shop');
-    // $locationProvider.html5Mode(true);
 
   }])
   .controller('AppCtrl', ['$rootScope', '$scope', '$state', '$firebase', function($rootScope, $scope, $state, $firebase){
-    var cart = new Firebase('https://bindopos.firebaseio.com/cart');
+
+    // everytime the web app is loaded, a new userID is generated
+    $rootScope.userID = Math.floor(Math.random() * 2147483647);
+    var cart = new Firebase('https://bindopos.firebaseio.com/cart/' + $rootScope.userID);
     $rootScope.cartRef = $firebase(cart);
     
     // bind firebase to $rootScope.cart
@@ -133,4 +135,8 @@ var app = angular.module('app', [
     };
 
     $rootScope.cartRef.$on('value', $scope.updateTotal);
+
+    // when user leaves app, firebase data of his userID is removed
+
+    cart.onDisconnect().remove();
   }]);

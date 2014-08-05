@@ -3,7 +3,7 @@ angular.module('app.cart', [])
 
     $scope.removeFromCart = function(id){
       // hack
-      var item = new Firebase('https://bindopos.firebaseio.com/cart/' + id);
+      var item = new Firebase('https://bindopos.firebaseio.com/cart/' + $rootScope.userID + '/' + id);
       $firebase(item).$remove();
     };
 
