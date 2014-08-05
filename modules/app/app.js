@@ -1,4 +1,4 @@
-var app = angular.module('app', [
+// var app = angular.module('app', [
   'firebase',
   'ui.router',
   'app.nav',
@@ -112,7 +112,7 @@ var app = angular.module('app', [
 
 
     $urlRouterProvider.otherwise('/shop');
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
 
   }])
   .controller('AppCtrl', ['$rootScope', '$scope', '$state', '$firebase', function($rootScope, $scope, $state, $firebase){
