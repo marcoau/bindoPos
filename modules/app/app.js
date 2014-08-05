@@ -137,6 +137,5 @@ var app = angular.module('app', [
     $rootScope.cartRef.$on('value', $scope.updateTotal);
 
     // when user leaves app, firebase data of his userID is removed
-
     cart.onDisconnect().remove();
   }]);

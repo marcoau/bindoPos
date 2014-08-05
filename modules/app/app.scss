@@ -28,7 +28,6 @@ $text-color-light: rgb(174,165,158);
 } 
 @include placeholder(rgb(217,213,210));
 
-
 body{
   position: relative;
   font-family: $font;
@@ -67,7 +66,6 @@ body{
   ul, li, input, a{
     display: inline-block;
   }
-
   .nav-controls{
     float: right;
   }
@@ -86,7 +84,6 @@ body{
 
   }
   .navbar-active{
-    // text-decoration: underline;
     border-bottom: 2px solid $main-color;
     padding-bottom: 8px;
   }
@@ -113,9 +110,7 @@ body{
     line-height: 21px;
     background-color: rgb(255,121,0);
     border-radius: 4px;
-
     padding: 5px 15px;
-
 
     color: $header-text-color;
   }

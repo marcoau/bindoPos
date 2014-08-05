@@ -83,13 +83,13 @@ body {
 
 .shop-product {
   background-color: white;
-  margin-top: 80px; }
+  margin: 80px auto; }
   .shop-product > div {
     display: inline-block;
     vertical-align: text-top; }
   .shop-product .product-showcase {
     width: 460px;
-    margin-right: 95px; }
+    margin-right: 90px; }
     .shop-product .product-showcase .showcase-image {
       height: 200px; }
     .shop-product .product-showcase h2 {
