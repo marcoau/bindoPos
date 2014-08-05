@@ -54,7 +54,7 @@
         <p>Free shipping & free 30-day returns guarantee</p>
       </div>
       <div class='total-right'>
-        <p>${{total}}</p>
+        <p>{{total | currency : symbol}}</p>
         <button class='button-checkout' ng-click='checkout()'>Checkout</button>
       </div>
 

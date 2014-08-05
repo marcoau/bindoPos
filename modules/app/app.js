@@ -30,20 +30,6 @@ var app = angular.module('app', [
           }
         }
       })
-      // .state('shop.home', {
-      //   views: {
-      //     'content': {
-      //       templateUrl: '/modules/shop/content/home.html'
-      //     }
-      //   }
-      // })
-      // .state('shop.product', {
-      //   views: {
-      //     'content': {
-      //       templateUrl: '/modules/shop/content/product.html'
-      //     }
-      //   }
-      // })
       .state('cart', {
         url: '/cart',
         views: {
@@ -129,9 +115,10 @@ var app = angular.module('app', [
     // $locationProvider.html5Mode(true);
 
   }])
-  .controller('AppCtrl', ['$rootScope', '$scope', '$firebase', function($rootScope, $scope, $firebase){
+  .controller('AppCtrl', ['$rootScope', '$scope', '$state', '$firebase', function($rootScope, $scope, $state, $firebase){
     var cart = new Firebase('https://bindopos.firebaseio.com/cart');
     $rootScope.cartRef = $firebase(cart);
+    
     // bind firebase to $rootScope.cart
     $rootScope.cartRef.$bind($rootScope, 'cart');
 
@@ -146,5 +133,4 @@ var app = angular.module('app', [
     };
 
     $rootScope.cartRef.$on('value', $scope.updateTotal);
-
-  }])
+  }]);

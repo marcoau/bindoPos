@@ -3,20 +3,22 @@ angular.module('app.checkout', [])
     $scope.goToShipping = function(){
       $state.go('checkout.shipping');
       $scope.checkoutState = 'shipping';
-      // $scope.updateCheckoutState();
     }
     $scope.goToBilling = function(){
-      $state.go('checkout.billing');
-      $scope.checkoutState = 'billing';
-      $scope.updateCheckoutState();
+      if($scope.shippingCheck()){
+        $state.go('checkout.billing');
+        $scope.checkoutState = 'billing';
+      }
     };
     $scope.goToConfirm = function(){
-      $state.go('checkout.confirm');
-      $scope.checkoutState = 'confirm';
-      $scope.updateCheckoutState();
+      if($scope.billingCheck()){
+        $state.go('checkout.confirm');
+        $scope.checkoutState = 'confirm';        
+      }
     };
     $scope.goToThankyou = function(){
       $state.go('checkout.thankyou');
+      $scope.checkoutState = 'thankyou';
     };
 
     $scope.progressBarState = {
@@ -25,7 +27,33 @@ angular.module('app.checkout', [])
       'confirm': 'bar-confirm'
     };
 
+    $scope.shippingCheck = function(){
+      if($scope.shippingInfo.name && $scope.shippingInfo.streetAddress && $scope.shippingInfo.apt
+        && $scope.shippingInfo.city && $scope.shippingInfo.state && $scope.shippingInfo.zip
+        && $scope.shippingInfo.email && $scope.shippingInfo.phone){
+        return true;
+      }else{
+        $scope.highlightEmptyShipping = true;
+        return false;
+      }
+    };
+
     $scope.goToShipping();
+
+    $scope.sameAsShipping = false;
+
+    $scope.billingSameAsShipping = function(){
+      $scope.sameAsShipping = !$scope.sameAsShipping;
+      $scope.billingInfo = {};
+
+      if($scope.sameAsShipping){
+        $scope.billingInfo.streetAddress = $scope.shippingInfo.streetAddress;
+        $scope.billingInfo.apt = $scope.shippingInfo.apt;
+        $scope.billingInfo.city = $scope.shippingInfo.city;
+        $scope.billingInfo.state = $scope.shippingInfo.state;
+        $scope.billingInfo.zip = $scope.shippingInfo.zip;
+      }
+    };
 
     $scope.shippingInfo = {
       name: 'Irene Chan',
@@ -33,7 +61,22 @@ angular.module('app.checkout', [])
       apt: 'Fl10',
       city: 'New York',
       state: 'NY',
-      zip: '10016-8804'
+      zip: '10016-8804',
+      email: 'yoyo@hey.com',
+      phone: '+1 123 443 2311'
+    };
+
+    $scope.billingCheck = function(){
+      if($scope.billingInfo
+        && $scope.billingInfo.streetAddress && $scope.billingInfo.apt && $scope.billingInfo.city
+        && $scope.billingInfo.state && $scope.billingInfo.zip
+        && $scope.paymentInfo.name && $scope.paymentInfo.cardNumber
+        && $scope.paymentInfo.expire && $scope.paymentInfo.cvc){
+        return true;
+      }else{
+        $scope.highlightEmptyBilling = true;
+        return false;
+      }
     };
 
     $scope.paymentInfo = {
@@ -42,7 +85,5 @@ angular.module('app.checkout', [])
       expire: '01/17',
       cvc: '222'
     };
-
-    $scope.billingInfo = $scope.shippingInfo;
 
   }]);

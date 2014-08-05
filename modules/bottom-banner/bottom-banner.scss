@@ -1,0 +1,35 @@
+.product-more{
+  height: 290px;
+  width: 100%;
+  background-color: $background-color-light;
+
+  .more-left{
+    width: 45%;
+    display: inline-block;
+    margin-top: 75px;
+  }
+
+  h3{
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+  h4{
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: $text-color-light;
+  }
+  button{
+    background-color: $main-color;
+    border-radius: 7px;
+    border: 0;
+    padding: 10px 30px;
+
+    color: white;
+    font-size: 18px;
+  }
+  .more-right{
+    margin-top: 75px;
+    float: right;
+  }
+}

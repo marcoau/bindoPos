@@ -11,12 +11,16 @@
   <div>
     <h2>Billing address</h2>
     <div>
-      <input type="checkbox" name="vehicle" ng-model='sameAsShipping' \> Same as shipping address<br>
-      <input class='input-street' ng-model='billingInfo.streetAddress' placeholder='Street address' \>
-      <input class='input-small' ng-model='billingInfo.apt' placeholder='Apt / Suite' \>
-      <input class='input-zip' ng-model='billingInfo.zip' placeholder='ZIP code' \>
-      <input class='input-city' ng-model='billingInfo.city' placeholder='City' \>
-      <input class='input-small' ng-model='billingInfo.state' placeholder='State' \>
+      <div class='billing-checkbox'>
+
+        <input type="checkbox" ng-model='sameAsShipping' ng-click='billingSameAsShipping()' \>
+        <span>Same as shipping address</span>
+      </div>
+      <input class='input-street' ng-model='billingInfo.streetAddress' ng-class='{"input-empty": highlightEmptyBilling && !billingInfo.streetAddress}' placeholder='Street address' \>
+      <input class='input-small' ng-model='billingInfo.apt' ng-class='{"input-empty": highlightEmptyBilling && !billingInfo.apt}' placeholder='Apt / Suite' \>
+      <input class='input-zip' ng-model='billingInfo.zip' ng-class='{"input-empty": highlightEmptyBilling && !billingInfo.zip}' placeholder='ZIP code' \>
+      <input class='input-city' ng-model='billingInfo.city' ng-class='{"input-empty": highlightEmptyBilling && !billingInfo.city}' placeholder='City' \>
+      <input class='input-small' ng-model='billingInfo.state' ng-class='{"input-empty": highlightEmptyBilling && !billingInfo.state}' placeholder='State' \>
     </div>
     <div class='billing-button'>
       <button class='button-continue' ng-click='goToConfirm()'>Continue</button>

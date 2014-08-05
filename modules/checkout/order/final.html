@@ -12,7 +12,7 @@
         Quantity: {{product.quantity}}
       </span>
       <span class='item-sum'>
-        ${{product.price * product.quantity}}
+        {{product.price * product.quantity | currency : symbol}}
       </span>
     </div>
   </div>
@@ -20,7 +20,7 @@
   <div class='order-summary-details'>
     <div>
       <span class='details-title'>Subtotal</span>
-      <span class='details-info'>${{total}}</span>
+      <span class='details-info'>{{total | currency : symbol}}</span>
     </div>
     <div>
       <span class='details-title'>Tax</span>
@@ -35,7 +35,7 @@
 
   <div class='order-summary-sum'>
     <span>Total</span>
-    <span class='sum-amount'>${{total}}</span>
+    <span class='sum-amount'>{{total | currency : symbol}}</span>
   </div>
 
 </div>

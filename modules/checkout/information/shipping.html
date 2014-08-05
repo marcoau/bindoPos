@@ -1,18 +1,18 @@
 <div class='shipping-information'>
   <h2>Shipping Information</h2>
   <div>
-    <input ng-model='shippingInfo.name' placeholder='Full name' \>
+    <input ng-model='shippingInfo.name' ng-class='{"input-empty": highlightEmptyShipping && !shippingInfo.name}' placeholder='Full name' \>
   </div>
   <div>
-    <input class='input-street' ng-model='shippingInfo.streetAddress' placeholder='Street address' \>
-    <input class='input-small' ng-model='shippingInfo.apt' placeholder='Apt / Suite' \>
-    <input class='input-zip' ng-model='shippingInfo.zip' placeholder='ZIP code' \>
-    <input class='input-city' ng-model='shippingInfo.city' placeholder='City' \>
-    <input class='input-small' ng-model='shippingInfo.state' placeholder='State' \>
+    <input class='input-street' ng-model='shippingInfo.streetAddress' ng-class='{"input-empty": highlightEmptyShipping && !shippingInfo.streetAddress}' placeholder='Street address' \>
+    <input class='input-small' ng-model='shippingInfo.apt' ng-class='{"input-empty": highlightEmptyShipping && !shippingInfo.apt}' placeholder='Apt / Suite' \>
+    <input class='input-zip' ng-model='shippingInfo.zip' ng-class='{"input-empty": highlightEmptyShipping && !shippingInfo.zip}' placeholder='ZIP code' \>
+    <input class='input-city' ng-model='shippingInfo.city' ng-class='{"input-empty": highlightEmptyShipping && !shippingInfo.city}' placeholder='City' \>
+    <input class='input-small' ng-model='shippingInfo.state' ng-class='{"input-empty": highlightEmptyShipping && !shippingInfo.state}' placeholder='State' \>
   </div>
   <div>
-    <input ng-model='shippingInfo.email' placeholder='Email address' \>
-    <input ng-model='shippingInfo.phone' placeholder='Phone number' \>
+    <input ng-model='shippingInfo.email' ng-class='{"shipping-empty": highlightEmptyShipping && !shippingInfo.email}' placeholder='Email address' \>
+    <input ng-model='shippingInfo.phone' ng-class='{"shipping-empty": highlightEmptyShipping && !shippingInfo.phone}' placeholder='Phone number' \>
   </div>
   <div class='billing-button'>
     <button class='button-continue' ng-click='goToBilling()'>Continue</button>
