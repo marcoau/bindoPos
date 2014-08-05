@@ -62,7 +62,7 @@ var app = angular.module('app', [
         }
       })
       .state('checkout.shipping', {
-        url: '/checkout/shipping',
+        url: '/shipping',
 
         views: {
           'order': {
@@ -74,7 +74,7 @@ var app = angular.module('app', [
         }
       })
       .state('checkout.billing', {
-        url: '/checkout/billing',
+        url: '/billing',
 
         views: {
           'order': {
@@ -86,7 +86,7 @@ var app = angular.module('app', [
         }
       })
       .state('checkout.confirm', {
-        url: '/checkout/confirm',
+        url: '/confirm',
 
         views: {
           'order': {
@@ -112,7 +112,7 @@ var app = angular.module('app', [
 
 
     $urlRouterProvider.otherwise('/shop');
-    // $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 
   }])
   .controller('AppCtrl', ['$rootScope', '$scope', '$state', '$firebase', function($rootScope, $scope, $state, $firebase){
