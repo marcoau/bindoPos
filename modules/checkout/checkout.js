@@ -55,17 +55,6 @@ angular.module('app.checkout', [])
       }
     };
 
-    $scope.shippingInfo = {
-      name: 'Irene Chan',
-      streetAddress: '386 Park Ave',
-      apt: 'Fl10',
-      city: 'New York',
-      state: 'NY',
-      zip: '10016-8804',
-      email: 'yoyo@hey.com',
-      phone: '+1 123 443 2311'
-    };
-
     $scope.billingCheck = function(){
       if($scope.billingInfo
         && $scope.billingInfo.streetAddress && $scope.billingInfo.apt && $scope.billingInfo.city
@@ -77,6 +66,18 @@ angular.module('app.checkout', [])
         $scope.highlightEmptyBilling = true;
         return false;
       }
+    };
+
+    // SAMPLE DATA FILLED IN
+    $scope.shippingInfo = {
+      name: 'Irene Chan',
+      streetAddress: '386 Park Ave',
+      apt: 'Fl10',
+      city: 'New York',
+      state: 'NY',
+      zip: '10016-8804',
+      email: 'yoyo@hey.com',
+      phone: '+1 123 443 2311'
     };
 
     $scope.paymentInfo = {
